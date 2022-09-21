@@ -36,15 +36,21 @@ code {
   background-size: 900px;
 }
 
+.me2 {
+  background: url(me.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 215px;
+  height: 272px;
+}
+
 .fbn {
   font-family: "Bebas Neue", cursive;
 }
 
-.red {
-  color: #f35151;
-}
-
-.hello {
-  font-size: 413px;
-  color: rgba(255, 255, 255, 0.13);
+* {
+  --swiper-theme-color: #f35151;
+  --swiper-pagination-bullet-inactive-opacity: 0.2;
+  --swiper-pagination-bullet-inactive-color: rgb(253, 253, 253);
 }
