@@ -19,12 +19,26 @@ code {
   background: url(HELLO.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-position-y: -60px;
+  background-position-y: -30px;
   background-size: 900px;
   background-color: #0b0b0c;
 }
 
 .bcs {
+  background: url(about.png);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-position-y: 180px;
+  background-position-x: -100px;
+  background-color: #131314;
+}
+
+.tcs {
+  background: url(about.png);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-position-y: 180px;
+  background-position-x: -100px;
   background-color: #131314;
 }
 
@@ -32,8 +46,8 @@ code {
   background: url(real.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-position-y: 10%;
-  background-size: 900px;
+  background-position-y: 5%;
+  background-size: 800px;
 }
 
 .me2 {
@@ -44,6 +58,34 @@ code {
   width: 215px;
   height: 272px;
 }
+.proj1 {
+  background: url(ogs.png);
+}
+.proj2 {
+  background: url(inst.png);
+}
+.proj3 {
+  background: url(music.png);
+}
+.music {
+  left: 40%;
+}
+
+.music p {
+  padding-left: 260px;
+}
+.imgp {
+  width: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: all 0.3s;
+}
+
+.imgp:hover {
+  transform: scale(1.1);
+  z-index: 1;
+}
 
 .fbn {
   font-family: "Bebas Neue", cursive;
@@ -52,5 +94,78 @@ code {
 * {
   --swiper-theme-color: #f35151;
   --swiper-pagination-bullet-inactive-opacity: 0.2;
-  --swiper-pagination-bullet-inactive-color: rgb(253, 253, 253);
+  --swiper-pagination-bullet-inactive-color: #fdfdfd;
+}
+
+.button {
+  --width: 100%;
+  height: 50px;
+  --tooltip-height: 35px;
+  --tooltip-width: 90px;
+  --gap-between-tooltip-to-button: calc(var(--tooltip-height) + 3px);
+  --tooltip-color: #fff;
+  width: var(--width);
+  position: relative;
+  text-align: center;
+  border: 2px solid #f35151;
+  font-size: 1.4rem;
+  font-family: "Bebas Neue", cursive;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+.button::before {
+  position: absolute;
+  content: attr(data-tooltip);
+  width: var(--tooltip-width);
+  height: var(--tooltip-height);
+  background-color: var(--tooltip-color);
+  font-size: 0.9rem;
+  color: #111;
+  border-radius: 0.25em;
+  line-height: var(--tooltip-height);
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+  left: calc(50% - var(--tooltip-width) / 2);
+}
+
+.button::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: var(--tooltip-color);
+  left: calc(50% - 10px);
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 10px);
+}
+
+.button::after,
+.button::before {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s;
+}
+
+.button-wrapper,
+.text,
+.icon {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  color: #fff;
+}
+
+.text,
+.icon {
+  transition: top 0.5s;
+}
+
+.button:hover .text {
+  top: -100%;
+}
+
+.button:hover .icon {
+  top: 0;
 }

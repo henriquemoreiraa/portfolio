@@ -7,10 +7,27 @@ module.exports = {
       215: "215px",
       379: "379px",
     },
+
     extend: {
       colors: {
         red1: "#F35151",
+        bl2: "#1514147c",
         bl1: "#151414",
+        html: "#FF6614",
+        css: "#00AEE3",
+        js: "#FFF500",
+        ts: "#0076BE",
+        react: "#06bdf5",
+      },
+      width: {
+        70: "69.5%",
+        840: "840px",
+      },
+      height: {
+        312: "312px",
+      },
+      fontSize: {
+        115: "115px",
       },
     },
   },

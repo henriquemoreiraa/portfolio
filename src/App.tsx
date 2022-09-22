@@ -5,7 +5,11 @@ import {
   FaGithub,
   FaPhoneAlt,
   FaEnvelope,
+  FaDownload,
 } from "react-icons/fa";
+import { IoDownloadOutline, IoDownloadSharp } from "react-icons/io5";
+import { MdDownloadForOffline } from "react-icons/md";
+import Projects from "./components/Projects";
 
 function App() {
   return (
@@ -48,7 +52,7 @@ function App() {
             </nav>
           </header>
 
-          <div className="h-5/6 flex justify-center items-center my-2">
+          <div className="h-5/6 flex justify-center items-center ">
             <h1 className="text-6xl font-bold pt-20">
               I develop <span className="text-red1">full stack web apps</span>
             </h1>
@@ -61,15 +65,25 @@ function App() {
         </div>
       </section>
 
-      <section className="bcs h-screen py-3 flex justify-center about">
-        <div className=" border border-neutral-800 max-w-840">
-          <div className="flex border-b border-neutral-800">
+      <section className="bcs py-3 flex justify-center about">
+        <div className=" border border-neutral-800 max-w-840 h-fit">
+          <div className="flex border-b  border-neutral-800">
             <div className="border-r border-neutral-800">
               <div className="mx-3">
                 <div className="me2 my-4"></div>
-                <button className="fbn border-2 border-red1 p-3 w-full text-center text-2xl hover:bg-red1">
+                {/* <button className="fbn border-2 border-red1 p-3 w-full text-center text-2xl hover:bg-red1">
                   DOWNLOAD CV
-                </button>
+                </button> */}
+                <div className="button hover:bg-red1">
+                  <div className="button-wrapper">
+                    <div className="text flex items-center justify-center p-3 top-0">
+                      Download cv
+                    </div>
+                    <span className="icon text-white top-full flex items-center justify-center">
+                      <IoDownloadOutline size={"1em"} />
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="my-4 font-light text-base text-neutral-300 mx-3">
@@ -100,11 +114,14 @@ function App() {
               </p>
             </div>
           </div>
-          <div className="flex justify-evenly my-5 h-40">
-            <Swipers />
-            <Swipers />
+          <div className="flex justify-evenly my-2  h-full w-full">
+            <Swipers s={0} />
+            <Swipers s={1} />
           </div>
         </div>
+      </section>
+      <section className=" tcs py-3 flex justify-center">
+        <Projects />
       </section>
       <footer></footer>
     </div>
