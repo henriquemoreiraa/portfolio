@@ -1,3 +1,6 @@
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 import Swipers from "./components/Swipers";
 import {
   FaInstagram,
@@ -5,17 +8,26 @@ import {
   FaGithub,
   FaPhoneAlt,
   FaEnvelope,
-  FaDownload,
 } from "react-icons/fa";
 import { IoDownloadOutline, IoDownloadSharp } from "react-icons/io5";
-import { MdDownloadForOffline } from "react-icons/md";
+import "./proj.css";
 import Projects from "./components/Projects";
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
+
   return (
     <div className="text-white">
       <section className="bcf h-screen">
-        <div className=" fixed right-0 bottom-0 ">
+        <div
+          data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-back"
+          className=" fixed right-0 bottom-0 z-10"
+        >
           <p className="rotate-90 font-light">Find me at</p>
           <div className="border-t border-white rotate-90 mb-16 mt-24"></div>
           <a href="https://www.instagram.com/rickmoreiraa_/" target="_blanc">
@@ -31,20 +43,32 @@ function App() {
             <FaGithub className=" w-full text-center my-5" />
           </a>
         </div>
-        <div className=" fixed left-3 bottom-2 ">
-          <div className="flex items-center font-light text-sm">
+        <div className=" fixed left-3 bottom-5  z-10 ">
+          <div
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            className="flex items-center font-light text-sm"
+          >
             <FaPhoneAlt />
             <p className="ml-2">+55 11 95356-5667</p>
           </div>
-          <div className="flex items-center font-light text-sm mt-1">
+          <div
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            className="flex items-center font-light text-sm mt-1"
+          >
             <FaEnvelope />
             <p className="ml-2">riqimoreiraa@gmail.com</p>
           </div>
         </div>
-        <div className="me h-full ">
+        <div
+          data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-back"
+          className="me h-full "
+        >
           <header>
             <nav className="fbn text-xl flex justify-between mx-5 py-3">
-              <a href="">work</a>
+              <a href="#work">work</a>
               <p>
                 Henrique <span className="text-red1">Moreira</span>
               </p>
@@ -53,37 +77,41 @@ function App() {
           </header>
 
           <div className="h-5/6 flex justify-center items-center ">
-            <h1 className="text-6xl font-bold pt-20">
+            <h1 className="text-4xl cel1:text-6xl font-bold pt-20 text-center">
               I develop <span className="text-red1">full stack web apps</span>
             </h1>
           </div>
 
-          <h2 className="text-center text-xl font-normal ">
+          <h2 className="text-center text-lg cel1:text-xl font-normal ">
             I am a full stack developer who{" "}
             <span className="text-red1">loves</span> to do what I do
           </h2>
         </div>
       </section>
 
-      <section className="bcs py-3 flex justify-center about">
-        <div className=" border border-neutral-800 max-w-840 h-fit">
-          <div className="flex border-b  border-neutral-800">
+      <section id="about" className="bcs py-3 flex justify-center about">
+        <div
+          data-aos="fade-up"
+          className=" border border-neutral-800 max-w-840 h-fit"
+        >
+          <div className="flex flex-col cel1:flex-row border-b border-neutral-800">
             <div className="border-r border-neutral-800">
               <div className="mx-3">
-                <div className="me2 my-4"></div>
-                {/* <button className="fbn border-2 border-red1 p-3 w-full text-center text-2xl hover:bg-red1">
-                  DOWNLOAD CV
-                </button> */}
-                <div className="button hover:bg-red1">
-                  <div className="button-wrapper">
-                    <div className="text flex items-center justify-center p-3 top-0">
-                      Download cv
-                    </div>
-                    <span className="icon text-white top-full flex items-center justify-center">
-                      <IoDownloadOutline size={"1em"} />
-                    </span>
-                  </div>
+                <div className="flex justify-center cel1:block ">
+                  <div className="me2 my-4 "></div>
                 </div>
+                <a href="/Henrique_Moreira_CV_0922.pdf" download>
+                  <div className="button hover:bg-red1">
+                    <div className="button-wrapper">
+                      <div className="text flex items-center justify-center p-3 top-0">
+                        Download cv
+                      </div>
+                      <span className="icon text-white top-full flex items-center justify-center">
+                        <IoDownloadOutline size={"1em"} />
+                      </span>
+                    </div>
+                  </div>
+                </a>
               </div>
             </div>
             <div className="my-4 font-light text-base text-neutral-300 mx-3">
@@ -114,16 +142,34 @@ function App() {
               </p>
             </div>
           </div>
-          <div className="flex justify-evenly my-2  h-full w-full">
+          <div className="flex tablet:flex-row flex-col justify-evenly my-2 h-full w-full">
             <Swipers s={0} />
             <Swipers s={1} />
           </div>
         </div>
       </section>
-      <section className=" tcs py-3 flex justify-center">
+      <section id="work" className=" tcs py-3 flex justify-center">
         <Projects />
       </section>
-      <footer></footer>
+      <footer className="flex justify-center items-center flex-col bg-balck">
+        <div className="p-5">
+          <h1 className="fbn text-4xl cel1:text-6xl">
+            let's <span className="text-red1">work</span> together :)
+          </h1>
+          <p className="underline mt-3   text-center ">
+            <a
+              href="https://www.linkedin.com/in/henriquemoreirain/"
+              target={"_blank"}
+              className="cursor-pointer"
+            >
+              Linkedin
+            </a>
+          </p>
+        </div>
+        <p className="text-neutral-300 text-sm">
+          Made it with ❤️ by Henrique Moreira
+        </p>
+      </footer>
     </div>
   );
 }

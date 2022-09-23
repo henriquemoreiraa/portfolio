@@ -15,8 +15,16 @@ code {
     monospace;
 }
 
+body::-webkit-scrollbar {
+  display: none; /* width of the entire scrollbar */
+}
+
+.fbn {
+  font-family: "Bebas Neue", Arial;
+}
+
 .bcf {
-  background: url(HELLO.png);
+  background: url(./imgs/HELLO.png);
   background-repeat: no-repeat;
   background-position: center;
   background-position-y: -30px;
@@ -25,7 +33,7 @@ code {
 }
 
 .bcs {
-  background: url(about.png);
+  background: url(./imgs/about.png);
   background-repeat: no-repeat;
   background-position: bottom left;
   background-position-y: 180px;
@@ -34,16 +42,14 @@ code {
 }
 
 .tcs {
-  background: url(about.png);
+  background: url(./imgs/projs.png);
   background-repeat: no-repeat;
-  background-position: bottom left;
-  background-position-y: 180px;
-  background-position-x: -100px;
+  background-position: center left;
   background-color: #131314;
 }
 
 .me {
-  background: url(real.png);
+  background: url(./imgs/real.png);
   background-repeat: no-repeat;
   background-position: center;
   background-position-y: 5%;
@@ -51,44 +57,12 @@ code {
 }
 
 .me2 {
-  background: url(me.jpg);
+  background: url(./imgs/me.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   width: 215px;
   height: 272px;
-}
-.proj1 {
-  background: url(ogs.png);
-}
-.proj2 {
-  background: url(inst.png);
-}
-.proj3 {
-  background: url(music.png);
-}
-.music {
-  left: 40%;
-}
-
-.music p {
-  padding-left: 260px;
-}
-.imgp {
-  width: 70%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  transition: all 0.3s;
-}
-
-.imgp:hover {
-  transform: scale(1.1);
-  z-index: 1;
-}
-
-.fbn {
-  font-family: "Bebas Neue", cursive;
 }
 
 * {
@@ -168,4 +142,12 @@ code {
 
 .button:hover .icon {
   top: 0;
+}
+
+@media (max-width: 660px) {
+  .bcf {
+    background-size: 600px;
+
+    background-position-y: 0px;
+  }
 }

@@ -8,15 +8,12 @@ import {
   FaBriefcase,
   FaCode,
   FaComment,
-  FaCss3,
   FaDesktop,
   FaDocker,
   FaFigma,
-  FaFolder,
   FaFolderOpen,
   FaHtml5,
   FaNodeJs,
-  FaPersonBooth,
   FaReact,
   FaServer,
 } from "react-icons/fa";
@@ -41,7 +38,9 @@ type Props = {
 function Swipers({ s }: Props) {
   return (
     <Swiper
-      className=" bg-bl1 border border-neutral-800 max-w-379 h-40 "
+      className={` bg-bl1 border border-neutral-800 max-w-379 h-40 ${
+        s ? "" : "mb-10"
+      }`}
       slidesPerView={1}
       pagination={{
         clickable: true,

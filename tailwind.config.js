@@ -7,7 +7,10 @@ module.exports = {
       215: "215px",
       379: "379px",
     },
-
+    screens: {
+      tablet: "860px",
+      cel1: "550px",
+    },
     extend: {
       colors: {
         red1: "#F35151",
@@ -18,6 +21,7 @@ module.exports = {
         js: "#FFF500",
         ts: "#0076BE",
         react: "#06bdf5",
+        balck: "#0b0b0c",
       },
       width: {
         70: "69.5%",

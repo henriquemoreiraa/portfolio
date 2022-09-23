@@ -1,0 +1,65 @@
+.proj1 {
+  background: url(./imgs/ogs.png);
+}
+.proj2 {
+  background: url(./imgs/inst.png);
+}
+.proj3 {
+  background: url(./imgs/music.png);
+}
+.proj4 {
+  background: url(./imgs/twitch.png);
+}
+.proj5 {
+  background: url(./imgs/weather.png);
+}
+.proj6 {
+  background: url(./imgs/mo.png);
+}
+.proj7 {
+  background: url(./imgs/rq.png);
+}
+.proj8 {
+  background: url(./imgs/calc.png);
+}
+.proj9 {
+  background: url(./imgs/dm.png);
+}
+.proj10 {
+  background: url(./imgs/pre.png);
+}
+.proj11 {
+  background: url(./imgs/wik.png);
+}
+/* .proj12 {
+  background: url(./imgs/.png);
+}
+.proj13 {
+  background: url(./imgs/.png);
+} */
+
+.music {
+  left: 40%;
+}
+
+.music p {
+  padding-left: 260px;
+}
+.imgp {
+  width: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: all 0.3s;
+}
+
+.imgp:hover {
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+@media (max-width: 550px) {
+  .imgp {
+    width: 100%;
+  }
+}
