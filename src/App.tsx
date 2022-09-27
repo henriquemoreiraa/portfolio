@@ -100,7 +100,7 @@ function App() {
                 <div className="flex justify-center cel1:block ">
                   <div className="me2 my-4 "></div>
                 </div>
-                <a href="/Henrique_Moreira_CV_0922.pdf" download>
+                <a href="/Henrique_Moreira_CV_1022.pdf" download>
                   <div className="button hover:bg-red1">
                     <div className="button-wrapper">
                       <div className="text flex items-center justify-center p-3 top-0">
