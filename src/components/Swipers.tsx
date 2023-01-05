@@ -23,6 +23,7 @@ import {
   SiAboutdotme,
   SiCss3,
   SiExpress,
+  SiGo,
   SiGraphql,
   SiMongodb,
   SiNextdotjs,
@@ -96,6 +97,7 @@ function Swipers({ s }: Props) {
             <p className="mt-4 mr-3 flex items-center justify-evenly text-neutral-300">
               <FaNodeJs size={"2.3em"} className="hover:text-green-500" />
               <SiExpress size={"2.3em"} className="hover:text-white" />
+              <SiGo size={"2.5em"} className="hover:text-blue-400" />
               <SiPostgresql size={"2.3em"} className="hover:text-blue-400" />
               <SiMongodb size={"2.3em"} className="hover:text-green-500" />
               <SiGraphql size={"2.3em"} className="hover:text-pink-500" />

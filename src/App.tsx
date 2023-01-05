@@ -100,7 +100,7 @@ function App() {
                 <div className="flex justify-center cel1:block ">
                   <div className="me2 my-4 "></div>
                 </div>
-                <a href="/Henrique_Moreira_CV_1022.pdf" download>
+                <a href="/henrique_moreira_0123.pdf" download>
                   <div className="button hover:bg-red1">
                     <div className="button-wrapper">
                       <div className="text flex items-center justify-center p-3 top-0">
@@ -116,9 +116,7 @@ function App() {
             </div>
             <div className="my-4 font-light text-base text-neutral-300 mx-3">
               <p className="mb-5">
-                Constant learner and passionate about programming. I've been in
-                this field of ​​software development for over a year. Always
-                trying to innovate and acquire new knowledge.
+                Constant learner and passionate about programming. I've been in this field of ​​software development for two years. Always trying to innovate and acquire new knowledge.
               </p>
 
               <p className="mb-5">
@@ -127,18 +125,16 @@ function App() {
               </p>
 
               <p className="mb-5">
-                I studied and continue to study algorithms and data structures
-                with python, because I believe in the importance of writing good
-                quality algorithms.
+                I studied and continue to study algorithms and data structures, because I believe in the importance of writing good quality algorithms. 
               </p>
 
               <p className="mb-5">
                 I also have knowledge in agile methodologies such as SCRUM.
               </p>
 
-              <p className="mb-5">
-                I currently work as a freelance Full Stack developer, but I'm
-                looking for my first opportunity in a company.
+              <p className="">
+                Currently I am Frontend Engineer (volunteer) for Greenstand a non-profit using open-source technology to address climate
+                change and alleviate poverty. I contribute to frontend projects on the platform using React and Material UI.
               </p>
             </div>
           </div>
@@ -148,7 +144,7 @@ function App() {
           </div>
         </div>
       </section>
-      <section id="work" className=" tcs py-3 flex justify-center">
+      <section id="work" className=" tcs py-3 flex justify-center pb-32">
         <Projects />
       </section>
       <footer className="flex justify-center items-center flex-col bg-balck">
